@@ -14,7 +14,7 @@ jobs:
         distribution: 'temurin'
     - name: Build APK
       run: |
-        cd $(dirname $(find . -name "build.gradle" | head -1))
+        cd $(dirname $(find . -name "settings.gradle" | head -1))
         sed -i 's/FAIL_ON_PROJECT_REPOS/PREFER_PROJECT/g' settings.gradle
         gradle assembleDebug
     - name: Upload APK
@@ -22,3 +22,4 @@ jobs:
       with:
         name: My-App-APK
         path: '**/*.apk'
+        
