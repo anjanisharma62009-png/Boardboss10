@@ -6,7 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Extract File
-      run: tar -xzf BoardBoss10.tar.gz
+      run: tar -xf BoardBoss10.tar.gz
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
