@@ -19,6 +19,7 @@ jobs:
     - name: Build APK
       run: |
         cd $(dirname $(find . -name "settings.gradle" | head -1))
+        echo '{"project_info":{"project_number":"1","project_id":"d"},"client":[{"client_info":{"mobilesdk_app_id":"1:1:android:1","android_client_info":{"package_name":"com.test"}},"api_key":[{"current_key":"1"}]}]}' > app/google-services.json
         sed -i 's/FAIL_ON_PROJECT_REPOS/PREFER_PROJECT/g' settings.gradle
         gradle assembleDebug
     - name: Upload APK
