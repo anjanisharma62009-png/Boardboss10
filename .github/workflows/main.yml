@@ -24,6 +24,7 @@ jobs:
         sed -i 's/FAIL_ON_PROJECT_REPOS/PREFER_PROJECT/g' settings.gradle
         find . -name "AndroidManifest.xml" -exec sed -i 's/@mipmap\/ic_launcher_round/@android:drawable\/sym_def_app_icon/g' {} +
         find . -name "AndroidManifest.xml" -exec sed -i 's/@mipmap\/ic_launcher/@android:drawable\/sym_def_app_icon/g' {} +
+        find . -type f -name "*.xml" -exec sed -i 's/@android:drawable\/ic_menu_home/@android:drawable\/ic_menu_gallery/g' {} +
         gradle assembleDebug
     - name: Upload APK
       uses: actions/upload-artifact@v4
