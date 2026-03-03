@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "961697279025",
+    "project_id": "boardboss10-17d17",
+    "storage_bucket": "boardboss10-17d17.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961697279025:android:9d0b69f4636010c0b13910",
+        "android_client_info": {
+          "package_name": "com.company.boardboss10"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFJ2gav-ZzVmADglXYx0J9n-EmUPzvHHM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
