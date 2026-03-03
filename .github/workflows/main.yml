@@ -20,7 +20,7 @@ jobs:
       run: |
         cd $(dirname $(find . -name "settings.gradle" | head -1))
         mkdir -p app
-        echo '{"project_info":{"project_number":"12345","project_id":"boardboss10"},"client":[{"client_info":{"mobilesdk_app_id":"1:12345:android:12345","android_client_info":{"package_name":"com.company.boardboss10"}},"api_key":[{"current_key":"dummy_key"}]}]}' > app/google-services.json
+        cp ${GITHUB_WORKSPACE}/google-services.json app/
         sed -i 's/FAIL_ON_PROJECT_REPOS/PREFER_PROJECT/g' settings.gradle
         find . -name "AndroidManifest.xml" -exec sed -i 's/@mipmap\/ic_launcher_round/@android:drawable\/sym_def_app_icon/g' {} +
         find . -name "AndroidManifest.xml" -exec sed -i 's/@mipmap\/ic_launcher/@android:drawable\/sym_def_app_icon/g' {} +
